@@ -1,0 +1,9 @@
+-Make a CommonModel to have (Id) and other common properties 
+-favour compostion over inhertanice  
+-Need to install first Package "System.ComponentModel.Annotation"
+-Make a Built-In Constructor Method to add DateTime.Now at time of instantiation
+-Repo to be global for all the Models Must be Generic Type
+-every controller must implement the CRUD operations for it's Model 
+-every controller should have access to instance of Model Repository
+-CRUD (Create - Read - Update - Delete) >>> HTTP ( POST - GET - PUT - DELETE ) >>> SQL ( Insert - Select - Update - Delete )
+-

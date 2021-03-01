@@ -1,0 +1,2 @@
+1- how to make a hash password in DB ? is it linked to "Solution" or to SQL ? 
+2- what is the Task ? 
