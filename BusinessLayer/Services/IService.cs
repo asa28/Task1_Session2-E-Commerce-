@@ -7,7 +7,7 @@ namespace Service_BusinessLayer.Services
         // Basic Businesss Operations  between Business layer and Data-Access layer
         // CRUD operation based on Injected Repository
 
-        public List<BasicModel> GetAll();
+        public IEnumerable<BasicModel> GetAll();
         public BasicModel Get(int id);
         public BasicModel Insert(BasicModel entity);
         public BasicModel Update(BasicModel entity);

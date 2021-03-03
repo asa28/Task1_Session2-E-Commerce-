@@ -10,9 +10,14 @@ namespace Service_BusinessLayer.Services
             throw new System.NotImplementedException();
         }
 
-        public List<User> GetAll()
+        public IEnumerable<User> GetAll()
         {
-            throw new System.NotImplementedException();
+            var Users_all = new List<User> { 
+                new User { FirstName = "Ahmed", LastName = "Sabry", IdentityNumber = "01234567891234", MobilePhone="01119790023", Email= "ahmadsabry28@gmail.com" }, 
+                new User { FirstName = "Mohamed", LastName = "Ahmed", IdentityNumber = "01234567891234", MobilePhone="01119790023", Email= "ahmadsabry28@gmail.com" }, 
+                new User { FirstName = "Salam", LastName = "Ahmed", IdentityNumber = "01234567891234", MobilePhone="01119790023", Email= "ahmadsabry28@gmail.com" }, 
+            };
+            return Users_all;
         }
 
         public User Insert(User entity)

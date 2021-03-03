@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Domain_DataLayer.Models.Person;
+using Domain_DataLayer.Models.Products;
 using Microsoft.AspNetCore.Mvc;
 using Service_BusinessLayer.Services;
 
@@ -8,35 +8,33 @@ namespace Task1_Session2_E_Commerce_.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UserController : ControllerBase
+    public class CategoryController : ControllerBase
     {
-        
-        private readonly UserService _Service = new UserService(); 
+        private readonly CategoryService _Service = new CategoryService();
 
-
-        // respond to GET api/User
+        // respond to GET api/Category
         [HttpGet]
-        public async Task<IEnumerable<User>> GetAllUsers()
+        public async Task<IEnumerable<Category>> GetAllCategorys()
         {
             var x = _Service.GetAll();
-            return x ;
+            return x;
         }
 
 
 
-        // respond to GET api/User/Id=? 
+        // respond to GET api/Category/Id=? 
         [HttpGet("{Id}")]
-        public async Task<User> GetUserById(int id)
+        public async Task<Category> GetCategoryById(int id)
         {
             var x = _Service.Get(id);
-            return x; 
+            return x;
         }
 
 
 
-        // respond to POST api/User
+        // respond to POST api/Category
         [HttpPost]
-        public async Task<User> InsertModel(User Model)
+        public async Task<Category> InsertModel(Category Model)
         {
             var x = _Service.Insert(Model);
             return x;
@@ -44,20 +42,20 @@ namespace Task1_Session2_E_Commerce_.Controllers
 
 
 
-        // respond to PUT api/User
+        // respond to PUT api/Category
         [HttpPut]
-        public async Task<User> UpdateModel(User Model)
+        public async Task<Category> UpdateModel(Category Model)
         {
             var x = _Service.Update(Model);
             return x;
         }
 
 
-        // respond to DELETE api/User
+        // respond to DELETE api/Category
         [HttpDelete("{Id}")]
         public void RemoveModel(int Id)
         {
-            _Service.Delete(Id);               
+            _Service.Delete(Id);
         }
     }
 }

@@ -10,17 +10,14 @@ namespace Domain_DataLayer.Models.Person
 
         public string LastName { get; set; }
         
-
-        [MaxLength(14,ErrorMessage = "The IdentityNumber can't exceed 14 digits")]
-        [MinLength(14,ErrorMessage = "The IdentityNumber can't be less than 14 digits")]
+        [StringLength(14,ErrorMessage = "The IdentityNumber has to be 14 digits")]
         [Required(ErrorMessage = "The IdentityNumber is required")]
-        public int IdentityNumber { get; set; }
+        public string IdentityNumber { get; set; }
 
-        
-        [MinLength(11, ErrorMessage = "The Mobile-Phone Number can't exceed 11 digits")]
-        [MaxLength(11, ErrorMessage = "The Mobile-Phone Number can't be less than 11 digits")]
+
+        [StringLength(11, ErrorMessage = "The Mobile-Phone Number has to be 11 digits")]
         [Required(ErrorMessage = "The Mobile-Phone Number must be provided")]
-        public int MobilePhone { get; set; }
+        public string MobilePhone { get; set; }
 
         
         

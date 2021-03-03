@@ -15,7 +15,7 @@ namespace Service_BusinessLayer.Services
             throw new System.NotImplementedException();
         }
 
-        public List<Category> GetAll()
+        public IEnumerable<Category> GetAll()
         {
             throw new System.NotImplementedException();
         }
